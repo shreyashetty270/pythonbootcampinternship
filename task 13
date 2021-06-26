@@ -1,0 +1,50 @@
+#To check a string contains only a certain set of characters
+import re
+def check_for_given(string):
+	charRe = re.compile(r'[^a-zA-Z0-9.]')
+	string = charRe.search(string)
+	return not bool(string)
+print(check_for_given("g2505h"))
+print(check_for_given("*&%@#!}{"))
+print (check_for_given("ZzXx"))
+#To match a word containing ab
+import re 
+def check(string) : 
+
+    regex = re.compile("ab+\w*")
+
+    match_object = regex.findall(string) 
+
+    if len(match_object) != 0 : 
+
+        for word in match_object : 
+
+            print(word) 
+    else :
+    	print("No match")
+
+if __name__ == '__main__' : 
+     string = "abhi is abnormal"
+     check(string) 
+ #To check for a number at the end of the word
+import re
+def end_num(string):
+    text = re.compile(r".*[0-9]$")
+    if text.match(string):
+        return True
+    else:
+        return False
+
+print(end_num('pot3x'))
+print(end_num('harry'))
+#To search the numbers (0-9) of length between 1 to 3 in a given string	
+import re
+results = re.finditer(r"([0-9]{1,3})", "Exercises number 1, 142, 43, and 335 are important")
+print("Number of length 1 to 3")
+for n in results:
+     print(n.group(0))
+	 
+#To match a string that contains only uppercase letters
+import re
+print(bool(re.match('^[A-Z]+$', 'harshith')))
+print(bool(re.match('^[A-Z]+$', 'shreya')))
