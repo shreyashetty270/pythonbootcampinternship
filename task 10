@@ -1,0 +1,15 @@
+# To change the items in the list
+list =[2,3,4,5,6]
+print("The list:",list)
+	
+list[1]= 22
+list[3]= 11
+print("The altered list:",list)
+# importing the random module
+import random
+print("The random choice:")
+print(random.randint(0,100))
+#To import sys to find python path
+import sys
+for p in sys.path:
+    print(p)
