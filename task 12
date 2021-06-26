@@ -1,0 +1,7 @@
+# To open a file
+f = open ("30days 30hours operation.txt","w")
+f.write("I have completed 10 days successfully")
+f.close()
+f = open ("30days 30hours operation.txt","a")
+f.write("\n By shreya shetty")
+f.close()
