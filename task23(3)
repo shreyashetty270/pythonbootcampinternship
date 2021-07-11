@@ -1,0 +1,15 @@
+import PyPDF2
+inputfile = "sample.pdf"
+watermark ="watermark.pdf"
+outputfile ="output.pdf"
+with open(input,'rb')as inputfile:
+	pdf = PyPDF2.pdffileReader(inputfile)
+with open(watermark,'rb')as watermarkfile:
+	watermarkpdf = PyPDF2.pdfReader(watermarkfile)
+	p= pdf.getPage(0)
+	w=watermarkpdf.getPage(0)
+	p.mergePage(w)
+	pdfwriter= PyPDF2.pdffilewriter()
+	pdfwriter.addpage(p)
+with open( outputfile,'wb')as outputfilecontent:
+	pdfwriter.write(outputfilecontent)
