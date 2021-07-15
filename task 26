@@ -1,0 +1,14 @@
+a = ["selena","taylor","0livia"]
+b = "singer"
+obj1 = enumerate(a)
+obj2 = enumerate(b)
+print ("Return type:",type(obj1))
+print (list(enumerate(a)))
+print (list(enumerate(b,2)))
+
+x = ["Yes","Or","No"]
+for ele in enumerate(x):
+    print (ele)
+    print
+for count,ele in enumerate(x,100):
+   print (count,ele)
